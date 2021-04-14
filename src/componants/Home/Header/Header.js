@@ -8,7 +8,7 @@ const Header = () => {
         <main className="homeHeader bg-light container-fluid">
             <div class="row align-items-center justify-content-around">
                 <div class="col-4">
-                    <h1>We build your dream</h1>
+                    <h1>We Build <br/> Your Dream</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae possimus qui?</p>
                     <button className="btn btn-primary">Discover More</button>
                 </div>
