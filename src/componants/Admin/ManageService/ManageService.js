@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const ManageService = () => {
     const [services, setServices] = useState([]);
@@ -11,16 +13,20 @@ const ManageService = () => {
                 setServices(data);
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
             })
             .then(function () {
-                // always executed
             });
     }, [services])
 
-    const handleDelete = () => {
-        
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:5000/serviceDelete?id=${ id }`)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
     return (
         <table className="table mt-5">
@@ -39,7 +45,7 @@ const ManageService = () => {
                             <th scope="row">{index + 1}</th>
                             <td>{service.name}</td>
                             <td>{service.price}</td>
-                            <td><button onClick={() => handleDelete(`${service._id}`)} className="btn btn-danger">Delete</button></td>
+                            <td><button onClick={() => handleDelete(`${ service._id }`)} className="btn btn-danger"> <FontAwesomeIcon icon={faTrashAlt} /></button></td>
                         </tr>)
                 }
             </tbody>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router';
+import Home from '../../Home/Home/Home';
 import AddService from '../AddService/AddService';
+import Book from '../Book/Book';
 import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -16,6 +18,9 @@ const Admin = () => {
                 </Route>
                 <Route path='/admin/manageservice'>
                     <ManageService></ManageService>
+                </Route>
+                <Route path='/book/:id'>
+                    <Book></Book>
                 </Route>
             </div>
         </div>
