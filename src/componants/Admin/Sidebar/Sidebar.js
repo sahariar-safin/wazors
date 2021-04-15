@@ -56,7 +56,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-dark" >
+                    <Link to="/dashboard/booking" className="text-dark" >
                         <span><FontAwesomeIcon icon={faList} />Booking List</span>
                     </Link>
                 </li>

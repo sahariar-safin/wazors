@@ -25,6 +25,9 @@ function App() {
           <PrivateRoute path="/book">
             <Admin></Admin>
           </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Admin></Admin>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>

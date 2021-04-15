@@ -1,3 +1,10 @@
 .bg-brand{
   background-color: slateblue;
 }
+.order{
+  width: 500px;
+}
+.orderStatus{
+  width: 90px;
+  padding: 10px;
+}

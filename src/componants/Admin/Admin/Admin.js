@@ -3,6 +3,7 @@ import { Route } from 'react-router';
 import Home from '../../Home/Home/Home';
 import AddService from '../AddService/AddService';
 import Book from '../Book/Book';
+import BookingList from '../BookingList/BookingList';
 import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -18,6 +19,9 @@ const Admin = () => {
                 </Route>
                 <Route path='/admin/manageservice'>
                     <ManageService></ManageService>
+                </Route>
+                <Route path='/dashboard/booking'>
+                    <BookingList></BookingList>
                 </Route>
                 <Route path='/book/:id'>
                     <Book></Book>

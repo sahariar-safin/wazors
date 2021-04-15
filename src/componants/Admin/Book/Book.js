@@ -30,13 +30,15 @@ const Book = () => {
 
     const handlePaymentSuccess = paymentId => {
         const orderDetails = {
-            ...loggedInUser,
-            shipment: shippingData,
+            ...shippingData,
+            userData: loggedInUser,
+            serviceImage: service.image.img,
             paymentId: paymentId,
+            orderStatus: "Pending",
             orderTime: new Date()
         };
 
-        axios.post('http://localhost:5000/order', orderDetails)
+        axios.post('http://localhost:5000/addOrder', orderDetails)
             .then(function (response) {
                 console.log(response);
             })
@@ -58,7 +60,7 @@ const Book = () => {
                 </div>
                 <div class="col-12">
                     <label for="inputDescription" class="form-label">Booking Service</label>
-                    <input disabled defaultValue={service.name} type="text" class="form-control" id="inputDescription" placeholder="Booking Service" />
+                    <input defaultValue={service.name} disabled type="text" class="form-control" id="inputDescription" placeholder="Booking Service" />
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Confirm and Process to Pay</button>
