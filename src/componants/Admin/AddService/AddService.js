@@ -38,8 +38,8 @@ const AddService = () => {
                     <input  {...register("name", { required: true })} type="name" class="form-control" id="inputName" />
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPrice" class="form-label">Email</label>
-                    <input  {...register("email", { required: true })} type="email" class="form-control" id="inputPrice" />
+                    <label for="inputPrice" class="form-label">Price</label>
+                    <input  {...register("price", { required: true })} type="number" class="form-control" id="inputPrice" />
                 </div>
                 <div class="col-12">
                     <label for="inputDescription" class="form-label">Description</label>

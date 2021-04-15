@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import Home from './componants/Home/Home/Home';
 import Admin from './componants/Admin/Admin/Admin';
-import { useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-export const UserContext = useContext();
+export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState([]);
