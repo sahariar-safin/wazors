@@ -6,11 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
     const noNamed = [
-        { name: "About", link: "/about" },
-        { name: "Services", link: "/services" },
-        { name: "Our Team", link: "/team" },
-        { name: "Our Gallery", link: "/gallery" },
-        { name: "Contact", link: "/contact" },
+        { name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, corrupti.", link: "" },
     ]
     const ourAddress = [
         { name: "New York - 101010 Hudson", link: "//google.com/map" },
@@ -18,7 +14,11 @@ const Footer = () => {
 
     ]
     const oralHealth = [
-        { name: "Emergency Dental Care", link: "/emergency" },
+        { name: "About", link: "/about" },
+        { name: "Services", link: "/services" },
+        { name: "Our Team", link: "/team" },
+        { name: "Our Gallery", link: "/gallery" },
+        { name: "Contact", link: "/contact" },
     ]
     const services = [
         { name: "Room Wallpapers", link: "/room-wallpapers" },
@@ -28,10 +28,10 @@ const Footer = () => {
         <footer className="footer-area bg-brand clear-both">
             <div className="container pt-5">
                 <div className="row py-5">
-                    <FooterCol key={1} menuTitle={"Link"} menuItems={noNamed} />
+                    <FooterCol key={1} menuTitle={"WAZORS"} menuItems={noNamed} />
                     <FooterCol key={2} menuTitle="Services" menuItems={services} />
-                    <FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth} />
-                    <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
+                    <FooterCol key={3} menuTitle="Links" menuItems={oralHealth} />
+                    <FooterCol key={4} menuTitle="Contact" menuItems={ourAddress}>
                         <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//facebook.com"><i class="fab fa-facebook-f"></i></a></li>
                             <li className="list-inline-item"><a href="//google.com"></a></li>
