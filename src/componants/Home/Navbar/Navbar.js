@@ -24,7 +24,7 @@ const Navbar = () => {
                             <Link className="nav-link">Contact</Link>
                         </li>
                         <li class="nav-item">
-                            <Link className="nav-link">Admin</Link>
+                            <Link to="/admin" className="nav-link">Admin</Link>
                         </li>
                     </ul>
                     <form class="d-flex">
