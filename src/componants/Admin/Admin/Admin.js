@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import AddService from '../AddService/AddService';
+import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Admin = () => {
@@ -12,6 +13,9 @@ const Admin = () => {
             <div className="col-md-9">
                 <Route path='/admin/addservice'>
                     <AddService></AddService>
+                </Route>
+                <Route path='/admin/manageservice'>
+                    <ManageService></ManageService>
                 </Route>
             </div>
         </div>
