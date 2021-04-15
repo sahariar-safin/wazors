@@ -1,3 +1,12 @@
 .testmonials{
     height: 500px;
 }
+.carousel-indicators{
+    margin-bottom: -3rem !important;
+}
+.carousel-control svg{
+    color: black;
+}
+.carousel-control .svg-inline--fa{
+    font-size: 30px;
+}
