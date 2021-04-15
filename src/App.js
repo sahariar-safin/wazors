@@ -8,6 +8,8 @@ import {
 import Home from './componants/Home/Home/Home';
 import Admin from './componants/Admin/Admin/Admin';
 import { createContext, useContext, useState } from 'react';
+import Login from './componants/Login/Login/Login';
+import PrivateRoute from './componants/Login/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -17,11 +19,14 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
-          <Route path="/book">
+          </PrivateRoute>
+          <PrivateRoute path="/book">
             <Admin></Admin>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
           </Route>
           <Route exact path="/">
             <Home></Home>

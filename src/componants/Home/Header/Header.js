@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../../Sheared/Navbar/Navbar';
 import './Header.css';
 import HeaderImage from '../../../Images/finn-zoQJIGS5EmQ-unsplash.jpg';
 

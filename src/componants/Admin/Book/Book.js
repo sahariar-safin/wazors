@@ -30,24 +30,19 @@ const Book = () => {
 
     const handlePaymentSuccess = paymentId => {
         const orderDetails = {
+            ...loggedInUser,
             shipment: shippingData,
+            paymentId: paymentId,
             orderTime: new Date()
         };
 
-        // fetch('https://floating-waters-67988.herokuapp.com/addOrder', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(orderDetails)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data) {
-        //             processOrder();
-        //             // alert('your order placed successfully');
-        //         }
-        //     })
+        axios.post('http://localhost:5000/order', orderDetails)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     return (
@@ -66,7 +61,7 @@ const Book = () => {
                     <input disabled defaultValue={service.name} type="text" class="form-control" id="inputDescription" placeholder="Booking Service" />
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Pay</button>
+                    <button type="submit" class="btn btn-primary">Confirm and Process to Pay</button>
                 </div>
             </form>
             <div style={{ display: shippingData ? 'block' : 'none' }} >
