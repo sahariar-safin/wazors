@@ -8,6 +8,7 @@ import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
 import Review from '../Review/Review'
 import OrderList from '../OrderList/OrderList';
+import AddAdmin from '../AddAdmin/AddAdmin';
 
 const Admin = () => {
     return (
@@ -21,6 +22,9 @@ const Admin = () => {
                 </Route>
                 <Route path='/admin/orders'>
                     <OrderList></OrderList>
+                </Route>
+                <Route path='/admin/addadmin'>
+                    <AddAdmin></AddAdmin>
                 </Route>
                 <Route path='/admin/manageservice'>
                     <ManageService></ManageService>

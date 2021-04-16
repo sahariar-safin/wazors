@@ -44,7 +44,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admin/people" className="text-dark">
+                                <Link to="/admin/addadmin" className="text-dark">
                                     <span><FontAwesomeIcon icon={faUserPlus} />Make Admin</span>
                                 </Link>
                             </li>

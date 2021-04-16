@@ -56,7 +56,8 @@ const OrderList = () => {
                                     <button className={order.orderStatus === "Pending" ? "btn btn-outline-danger dropdown-toggle" : "btn btn-outline-success dropdown-toggle"} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{order.orderStatus}</button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li onClick={() => handleOrder(`${ order._id }`, ` ${ order.orderStatus }`)}><a className={order.orderStatus === "Pending" ? "dropdown-item active" : "dropdown-item"} href="#">Pending</a></li>
-                                        <li onClick={() => handleOrder(`${ order._id }`, `${ order.orderStatus }`)}><a className={order.orderStatus === "Confirmed" ? "dropdown-item active" : "dropdown-item"} href="#">Confirmed</a></li>
+                                        <li onClick={() => handleOrder(`${ order._id }`, `${ order.orderStatus }`)}><a className={order.orderStatus === "On going" ? "dropdown-item active" : "dropdown-item"} href="#">On Going</a></li>
+                                        <li onClick={() => handleOrder(`${ order._id }`, `${ order.orderStatus }`)}><a className={order.orderStatus === "Done" ? "dropdown-item active" : "dropdown-item"} href="#">Done</a></li>
                                     </ul>
                                 </div></td>
                         </tr>)

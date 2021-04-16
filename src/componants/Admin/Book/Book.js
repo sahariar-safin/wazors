@@ -64,6 +64,7 @@ const Book = () => {
                     <label for="inputDescription" class="form-label">Booking Service</label>
                     <input defaultValue={service.name} disabled type="text" class="form-control" id="inputDescription" placeholder="Booking Service" />
                 </div>
+                <small>Your service charge will be <strong>${service.price}</strong></small>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Confirm and Process to Pay</button>
                 </div>

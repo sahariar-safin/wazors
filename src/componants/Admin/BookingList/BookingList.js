@@ -28,19 +28,19 @@ const BookingList = () => {
                 {
                     orders.map(order =>
                         <div class="order card">
-                            <img style={{height: "250px"}} src={`data:image/jpeg;base64,${ order.serviceImage }`} class="img-fluid card-img-top" alt="..." />
+                            <img style={{ height: "250px" }} src={`data:image/jpeg;base64,${ order.serviceImage }`} class="img-fluid card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">{order.serviceName}</h5>
                                 <p class="card-text">{order.description}</p>
-                                <div className={order.orderStatus === "Pending" ? 'card text-white bg-danger' : 'card text-white bg-success'}>
-                                    <p className="text-center">{order.orderStatus}</p>
+                                <div className={order.orderStatus === "Pending" ? 'card bg-danger ' : 'card bg-success'}>
+                                    <p className="text-center"><strong>{order.orderStatus}</strong></p>
                                 </div>
                             </div>
                         </div>
                     )
                 }
             </div>
-        </div>
+        </div >
     );
 };
 
