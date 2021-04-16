@@ -5,7 +5,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/orders')
+        axios.get('https://arcane-reef-90996.herokuapp.com/orders')
             .then(function (response) {
                 const data = response.data;
                 setOrders(data);
@@ -23,7 +23,7 @@ const OrderList = () => {
             orderId: id
         }
         console.log(data);
-        axios.post('http://localhost:5000/manageOrder', data)
+        axios.post('https://arcane-reef-90996.herokuapp.com/manageOrder', data)
             .then(function (response) {
                 console.log(response);
             })

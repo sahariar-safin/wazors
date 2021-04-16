@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState();
 
     useEffect(() => {
-        axios.post('http://localhost:5000/isAdmin', loggedInUser)
+        axios.post('https://arcane-reef-90996.herokuapp.com/isAdmin', loggedInUser)
             .then(function (response) {
                 const data = response.data[0].isAdmin;
                 setIsAdmin(data);

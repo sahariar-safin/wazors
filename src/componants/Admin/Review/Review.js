@@ -12,7 +12,7 @@ const Review = () => {
             loggedInUser,
             ...data
         }
-        axios.post('http://localhost:5000/addReview', reviewData)
+        axios.post('https://arcane-reef-90996.herokuapp.com/addReview', reviewData)
             .then(function (response) {
                 document.getElementById('inputName').value = "";
                 document.getElementById('companyName').value = "";

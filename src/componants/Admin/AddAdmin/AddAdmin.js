@@ -7,7 +7,7 @@ const AddAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/users')
+        axios.get('https://arcane-reef-90996.herokuapp.com/users')
             .then(function (response) {
                 const data = response.data;
                 setPeoples(data);
@@ -22,9 +22,9 @@ const AddAdmin = () => {
             peopleRole: role,
             peopleId: id
         }
-        axios.post('http://localhost:5000/managePeople', data)
+        axios.post('https://arcane-reef-90996.herokuapp.com/managePeople', data)
             .then(function (response) {
-                
+
             })
             .catch(function (error) {
                 console.log(error);

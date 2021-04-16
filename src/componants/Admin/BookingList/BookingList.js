@@ -10,7 +10,7 @@ const BookingList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        axios.post('http://localhost:5000/order', loggedInUser)
+        axios.post('https://arcane-reef-90996.herokuapp.com/order', loggedInUser)
             .then(function (response) {
                 const data = response.data;
                 setOrders(data);

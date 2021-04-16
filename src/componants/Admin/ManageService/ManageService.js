@@ -7,7 +7,7 @@ const ManageService = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/services')
+        axios.get('https://arcane-reef-90996.herokuapp.com/services')
             .then(function (response) {
                 const data = response.data;
                 setServices(data);
@@ -20,7 +20,7 @@ const ManageService = () => {
     }, [services])
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/serviceDelete?id=${ id }`)
+        axios.delete(`https://arcane-reef-90996.herokuapp.com/serviceDelete?id=${ id }`)
             .then(function (response) {
                 console.log(response);
             })

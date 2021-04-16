@@ -11,7 +11,7 @@ const Testmonials = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/review')
+        axios.get('https://arcane-reef-90996.herokuapp.com/review')
             .then(function (response) {
                 const data = response.data;
                 setReviews(data);

@@ -19,7 +19,7 @@ const Book = () => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/service?id=${ id }`)
+        axios.get(`https://arcane-reef-90996.herokuapp.com/service?id=${ id }`)
             .then(function (response) {
                 const data = response.data[0];
                 setService(data);
@@ -39,7 +39,7 @@ const Book = () => {
             orderTime: new Date()
         };
 
-        axios.post('http://localhost:5000/addOrder', orderDetails)
+        axios.post('https://arcane-reef-90996.herokuapp.com/addOrder', orderDetails)
             .then(function (response) {
                 console.log(response);
                 history.push('/dashboard/booking')

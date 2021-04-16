@@ -11,7 +11,7 @@ const AddService = () => {
         Data.append("name", data.name);
         Data.append("price", data.price);
         Data.append("description", data.description)
-        axios.post('http://localhost:5000/addservice', Data, {
+        axios.post('https://arcane-reef-90996.herokuapp.com/addservice', Data, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

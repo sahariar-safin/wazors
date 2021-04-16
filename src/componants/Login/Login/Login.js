@@ -24,7 +24,7 @@ const Login = () => {
 
     const addUser = (userData) => {
         userData._id = userData.email;
-        axios.post('http://localhost:5000/addUser', userData)
+        axios.post('https://arcane-reef-90996.herokuapp.com/addUser', userData)
             .then(function (response) {
 
             })
