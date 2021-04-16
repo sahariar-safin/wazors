@@ -14,6 +14,9 @@ const Review = () => {
         }
         axios.post('http://localhost:5000/addReview', reviewData)
             .then(function (response) {
+                document.getElementById('inputName').value = "";
+                document.getElementById('companyName').value = "";
+                document.getElementById('description').value = "";
                 console.log(response);
             })
             .catch(function (error) {
@@ -27,7 +30,7 @@ const Review = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="inputName" class="form-label">Your name</label>
-                    <input  {...register("name", { required: true })} type="text" class="form-control" id="inputName" placeholder="Your name" />
+                    <input defaultValue={loggedInUser.name}  {...register("name", { required: true })} type="text" class="form-control" id="inputName" placeholder="Your name" />
                 </div>
                 <div class="mb-3">
                     <label for="companyName" class="form-label">Company's name, Designation</label>
