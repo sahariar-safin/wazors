@@ -5,7 +5,7 @@ import './Sarvice.css';
 const Service = ({ service }) => {
     let history = useHistory();
     return (
-        <div class="col">
+        <div class="col-md-4">
             <div onClick={() => history.push(`/book/${ service._id }`)} class="service card">
                 <img src={`data:image/jpeg;base64,${ service.image.img }`} class="img-fluid card-img-top" alt="..." />
                 <div class="card-body">

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -28,7 +30,11 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-primary" type="submit">Login</button>
+                        {
+                            loggedInUser.photoURL
+                                ? <img style={{ height: '50px', width: '50px', borderRadius: '50%' }} src={loggedInUser.photoURL} alt="" />
+                                : <Link to="/login"><button class="btn btn-primary" type="submit">Login</button></Link>
+                        }
                     </form>
                 </div>
             </div>

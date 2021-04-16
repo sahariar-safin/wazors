@@ -27,7 +27,8 @@ const Testmonials = () => {
 
     return (
         <div className="container testmonials row align-items-center ms-auto me-auto">
-            <h3 className="text-center">Testmonials</h3>
+            <h3 className="text-center"><strong>Testmonials</strong> <br />
+                <small>What They’re Saying About Our Work</small></h3>
             <div id="carouselExampleControls" class="carousel slide" data-bs-interval="3000" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     {

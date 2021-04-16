@@ -24,7 +24,6 @@ const Login = () => {
 
     const addUser = (userData) => {
         userData._id = userData.email;
-        console.log(userData);
         axios.post('http://localhost:5000/addUser', userData)
             .then(function (response) {
 
@@ -42,7 +41,6 @@ const Login = () => {
             })
     }
 
-    console.log(loggedInUser);
     return (
         <div>
             <Navbar></Navbar>

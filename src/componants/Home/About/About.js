@@ -5,10 +5,10 @@ import AboutImage from '../../../Images/liang-gao-r4YuSr9451k-unsplash.jpg';
 const About = () => {
     return (
         <div className="container about row align-items-center ms-auto me-auto justify-content-around">
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12 col-xs-12">
                 <img src={AboutImage} className="img-fluid" alt="" />
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12 col-xs-12">
                 <h4>About Wazors</h4>
                 <h1>We're Leader in Wall
                 <br/>

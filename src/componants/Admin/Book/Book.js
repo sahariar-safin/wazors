@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../../App';
 import ProcessPayment from '../PaymentProcess/PaymentProccess';
 
 const Book = () => {
+    const history = useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [service, setService] = useState([]);
     const [shippingData, setShippingData] = useState(null);
@@ -41,6 +42,7 @@ const Book = () => {
         axios.post('http://localhost:5000/addOrder', orderDetails)
             .then(function (response) {
                 console.log(response);
+                history.push('/dashboard/booking')
             })
             .catch(function (error) {
                 console.log(error);

@@ -28,7 +28,7 @@ const BookingList = () => {
                 {
                     orders.map(order =>
                         <div class="order card">
-                            <img src={`data:image/jpeg;base64,${ order.serviceImage }`} class="img-fluid card-img-top" alt="..." />
+                            <img style={{height: "250px"}} src={`data:image/jpeg;base64,${ order.serviceImage }`} class="img-fluid card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title">{order.serviceName}</h5>
                                 <p class="card-text">{order.description}</p>

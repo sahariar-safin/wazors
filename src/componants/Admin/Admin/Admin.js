@@ -7,6 +7,7 @@ import BookingList from '../BookingList/BookingList';
 import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
 import Review from '../Review/Review'
+import OrderList from '../OrderList/OrderList';
 
 const Admin = () => {
     return (
@@ -17,6 +18,9 @@ const Admin = () => {
             <div className="col-md-9">
                 <Route path='/admin/addservice'>
                     <AddService></AddService>
+                </Route>
+                <Route path='/admin/orders'>
+                    <OrderList></OrderList>
                 </Route>
                 <Route path='/admin/manageservice'>
                     <ManageService></ManageService>
