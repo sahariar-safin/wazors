@@ -61,7 +61,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-dark" >
+                    <Link to="/dashboard/review" className="text-dark" >
                         <span><FontAwesomeIcon icon={faCommentAlt} />Review</span>
                     </Link>
                 </li>

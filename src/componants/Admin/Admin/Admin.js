@@ -6,6 +6,7 @@ import Book from '../Book/Book';
 import BookingList from '../BookingList/BookingList';
 import ManageService from '../ManageService/ManageService';
 import Sidebar from '../Sidebar/Sidebar';
+import Review from '../Review/Review'
 
 const Admin = () => {
     return (
@@ -22,6 +23,9 @@ const Admin = () => {
                 </Route>
                 <Route path='/dashboard/booking'>
                     <BookingList></BookingList>
+                </Route>
+                <Route path='/dashboard/review'>
+                    <Review></Review>
                 </Route>
                 <Route path='/book/:id'>
                     <Book></Book>
