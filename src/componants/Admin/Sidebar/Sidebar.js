@@ -19,7 +19,7 @@ const Sidebar = () => {
             .catch(function (error) {
                 console.log(error);
             });
-    }, [])
+    }, [isAdmin])
 
 
     return (
