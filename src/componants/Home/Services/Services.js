@@ -24,7 +24,7 @@ const Services = () => {
         <div id="services" className="container ms-auto me-auto services">
             <h5 className='text-center'>Our Service List</h5>
             <h1 className='text-center'>Services we are providing</h1>
-            <div className="row d-flex flex-wrap justify-content-evenly">
+            <div className="row d-flex flex-wrap justify-content-evenly pt-5">
                 {
                     services.map(service => <Service service={service}></Service>)
                 }
