@@ -1,6 +1,12 @@
 ### Hi there!!!
 
-You know? When I was start this project I was over exited! Now time to explain here why I was exited for this project. It is actually an House painter company management website. Here an user can book a service and can see her previous booking status. Also an user can give them a review. Other side I mean an admin can add people as a admin. Also can add services, manage bookings and manage services. And that's it.
+Technology: JavaScript, React, Node.js, Express.js, Bootstrap, MongoDB, Firebase, Authentication, Stripe.js, Heroku.
+
+Overview: 
+*It is a House painter company management website.
+*The user can order services and give them a review. 
+*The admin can handle orders, make more admin, add service etc.
+
 
 #### Thank you!
 ### Live site: https://wazorsbd.web.app
